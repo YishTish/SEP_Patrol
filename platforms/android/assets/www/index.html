@@ -8,17 +8,38 @@
 	<link href="assets/css/pageslider.css" rel="stylesheet">
 </head>
 <body>
+<div class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item center half">
+            <h1 class="topcoat-navigation-bar__title pageTitle">SEP Patrol</h1>
+        </div>
+    </div>
+    
 <script id="home-tpl" type="text/x-handlebars-template">
-	<div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item center full">
-            <h1 class="topcoat-navigation-bar__title">Employee Directory</h1>
-        </div>
-    </div>
     <div class="search-bar">
         <input type="search" placeholder="search" class="topcoat-search-input search-key">
     </div>
     <div class="topcoat-list__container scroller">
         <ul class="topcoat-list list employee-list"></ul>
+    </div>
+</script> 
+
+<script id="signIn-tpl" type="text/x-handlebars-template">
+	<div style="align:center">
+		<div class="topcoat-list__container">
+            	<ul class="topcoat-list list actions">
+            	    <li class="topcoat-list__item">
+						<p>First Name</p>
+						<p><input type="text" class="topcoat-text-input" placeholder="First Name"/></p>
+					</li>
+					<li class="topcoat-list__item">
+						<p>Last (sir) Name</p>
+						<p><input type="text" class="topcoat-text-input" placeholder="Last (sir) Name"/></p>
+					</li>
+				</ul>
+				<div style="margin:30px 20px">
+						<button class="topcoat-button signInBtn">Sign In</button>
+				</div>
+    	</div>
     </div>
 </script> 
 
@@ -75,6 +96,7 @@
 <script src="js/adapters/localstorage-adapter.js"></script>
 <script src="js/HomeView.js"></script>
 <script src="js/EmployeeView.js"></script>
+<script src="js/SignInView.js"></script>
 <script src="js/app.js"></script>
 <script src="cordova.js"></script>
 <script src="lib/fastclick.js"></script>

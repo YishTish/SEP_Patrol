@@ -5,6 +5,7 @@
 	var homeTpl = Handlebars.compile($("#home-tpl").html());
 	var employeeLiTpl = Handlebars.compile($("#employee-li-tpl").html());
 	var employeeTpl = Handlebars.compile($("#employee-tpl").html());
+	var signInTpl = Handlebars.compile($("#signIn-tpl").html());
     var adapter = new LocalStorageAdapter();
     var detailsUrl = /^#employees\/(\d{1,})/;
     var slider = new PageSlider($('body'));
@@ -45,6 +46,8 @@
 	
 	function route(){
 		
+		slider.slidePage(new SignInView(adapter,signInTpl).render().el);
+		return;
 		var hash = window.location.hash;
 		if(!hash){
 			slider.slidePage(new HomeView(adapter, homeTpl, employeeLiTpl).render().el);
