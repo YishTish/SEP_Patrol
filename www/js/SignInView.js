@@ -12,7 +12,8 @@
 	 
 	 this.render = function() {
 		this.el.html(template);
-		return this;	
+		return this;
+		
 	 };
 	 
 	 this.signInUser = function() {
